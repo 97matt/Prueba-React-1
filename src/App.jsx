@@ -14,6 +14,7 @@ const App = () => {
   }, []);
 
   const getProducts = async () => {
+    // make api call
     const { data } = await axios.get("https://fakestoreapi.com/products");
     // sort by price high to low
     const sorted = data.sort((a, b) => a.price - b.price);
